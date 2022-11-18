@@ -9,4 +9,4 @@ DECLARE @json NVARCHAR(2048) = N'{
    "Object_value": {"obj":"ect"}
 }';
 
-SELECT * FROM OpenJson(@json) WITH	(ID   nvarchar(200) '$.String_value', 	Quantity   nvarchar(200) '$.DoublePrecisionFloatingPoint_value' ) 
+SELECT ID, Quantity FROM OpenJson(@json) WITH(ID   NVARCHAR(200) '$.String_value', 	Quantity   NVARCHAR(200) '$.DoublePrecisionFloatingPoint_value' );
